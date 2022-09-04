@@ -1,7 +1,31 @@
+import { useEffect } from "react"
+import { createPlan, deletePlan, getAllPlans, getPlanById, updatePlan } from "../services/fetchService"
 
 
 
 export default function ShowPlansPage() {
+
+    let data = {
+        name: "Monthly pack 5",
+        description: "8 gb/par day",
+        validity: 28
+    }
+   
+    let udata = {
+        id: 7007,
+        name: "Monthly pack 5",
+        description: "8 gb/par day",
+        validity: 28
+    }
+
+    useEffect(() => {
+        // getAllPlans().then((res) => console.log(res))
+        // createPlan(data).then((res) => console.log(res))
+        // getPlanById(7005).then((res) => console.log(res))
+        // updatePlan(udata).then((res) => console.log(res))
+        // deletePlan(3001).then((res) => console.log(res))
+    }, [])
+
     return (
         <div>
             <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
