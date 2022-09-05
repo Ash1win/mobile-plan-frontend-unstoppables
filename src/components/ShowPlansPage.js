@@ -2,12 +2,16 @@ import { useEffect, useState } from "react"
 import { createPlan, deletePlan, getAllPlans, getPlanById, updatePlan } from "../services/fetchService"
 import { Navigate, Route, Routes } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom"
 import doUpdate from "./UpdatePage";
 
 
 export default function ShowPlansPage() {
 
     const [mobilePlans, setMobilePlans] = useState([])
+
+    // console.log(useLocation().pathname)
+
     
     function handleDelete(id){
         deletePlan(id).then((res) => {

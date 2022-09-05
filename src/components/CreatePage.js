@@ -1,8 +1,13 @@
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 import { createPlan } from "../services/fetchService"
 
 
 export default function CreatePage() {
+
+    const [activeLink, setActiveLink] = useState("/")
+
+    // console.log(useLocation().pathname)
 
     const[id, setID] = useState('')
     const[name, setName] = useState('')

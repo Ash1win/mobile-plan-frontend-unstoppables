@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import App from "../App"
 import { getPlanById, updatePlan } from "../services/fetchService"
 import { getAllPlans } from "../services/fetchService"
 
 
 export default function UpdatePage() {
+
+
+    // console.log(useLocation().pathname)
 
     
     const[id, setID] = useState('')

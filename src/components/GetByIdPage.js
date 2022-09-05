@@ -1,9 +1,13 @@
 import { useState } from "react"
 import { getPlanById } from "../services/fetchService"
+import { useLocation } from "react-router-dom"
 
 
 
 export default function GetByIdPage() {
+
+    // console.log(useLocation().pathname)
+
 
     const[id, setID] = useState('')
 
