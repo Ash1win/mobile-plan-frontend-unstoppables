@@ -1,29 +1,36 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { createPlan, deletePlan, getAllPlans, getPlanById, updatePlan } from "../services/fetchService"
-
+import { Navigate, Route, Routes } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import doUpdate from "./UpdatePage";
 
 
 export default function ShowPlansPage() {
 
-    let data = {
-        name: "Monthly pack 5",
-        description: "8 gb/par day",
-        validity: 28
-    }
-   
-    let udata = {
-        id: 7007,
-        name: "Monthly pack 5",
-        description: "8 gb/par day",
-        validity: 28
+    const [mobilePlans, setMobilePlans] = useState([])
+    
+    function handleDelete(id){
+        deletePlan(id).then((res) => {
+            getAllPlans().then((res) => {
+                setMobilePlans(res);
+            })
+        })
+        
     }
 
+    function handleUpdate(plan){
+        // console.log(JSON.stringify(plan));
+        doUpdate(plan)
+    }
+
+
     useEffect(() => {
-        // getAllPlans().then((res) => console.log(res))
-        // createPlan(data).then((res) => console.log(res))
-        // getPlanById(7005).then((res) => console.log(res))
-        // updatePlan(udata).then((res) => console.log(res))
-        // deletePlan(3001).then((res) => console.log(res))
+        getAllPlans().then((res) => {
+            setMobilePlans(res);
+        })
+        //createPlan(data).then((res) => console.log(res))
+        //getPlanById(2).then((res) => console.log(res))
+        
     }, [])
 
     return (
@@ -54,66 +61,38 @@ export default function ShowPlansPage() {
         </tr>
     </thead>
     <tbody>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        { mobilePlans && mobilePlans.map((plan)=>{
+            return (
+                <tr class="bg-white dark:bg-gray-800">
             <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                1
+                {plan.id}
             </th>
             <td class="py-4 px-6">
-                Monthly Plan
+                {plan.name}
             </td>
             <td class="py-4 px-6">
-                1 GB/per day
+                {plan.description}
             </td>
             <td class="py-4 px-6">
-                28
+                {plan.validity}
             </td>
+
             <td class="py-4 px-6">
-            <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Update</button>
+            <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" 
+                onClick={()=>handleUpdate(plan)
+                }> <NavLink to={`/update/${plan.id}`}>Update</NavLink></button>
             </td>
+
             <td class="py-4 px-6">
-                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" 
+                    onClick={()=>{
+                        handleDelete(plan.id)}
+                    }>Delete</button>
             </td>
         </tr>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                2
-            </th>
-            <td class="py-4 px-6">
-                Monthly Plan
-            </td>
-            <td class="py-4 px-6">
-                2 GB/per day
-            </td>
-            <td class="py-4 px-6">
-                28
-            </td>
-            <td class="py-4 px-6">
-            <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Update</button>
-            </td>
-            <td class="py-4 px-6">
-                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
-            </td>
-        </tr>
-        <tr class="bg-white dark:bg-gray-800">
-            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                3
-            </th>
-            <td class="py-4 px-6">
-                Yearly Plan
-            </td>
-            <td class="py-4 px-6">
-                3 GB/per day
-            </td>
-            <td class="py-4 px-6">
-                365
-            </td>
-            <td class="py-4 px-6">
-            <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Update</button>
-            </td>
-            <td class="py-4 px-6">
-                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
-            </td>
-        </tr>
+            )
+        })}
+        
     </tbody>
 </table>
 </div>

@@ -45,6 +45,7 @@ export default function App() {
                     <Routes>
                         <Route path="create" element={<CreatePage />} />
                         <Route path="update" element={<UpdatePage />} />
+                        <Route path="update/:id" element={<UpdatePage />} />
                         <Route index element={<ShowPlansPage />} />
                         <Route path="getbyid" element={<GetByIdPage />} />
                     </Routes>
