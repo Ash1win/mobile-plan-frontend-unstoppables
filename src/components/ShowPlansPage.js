@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom"
 import doUpdate from "./UpdatePage";
+import Trash from "../icons/icons";
 
 
 export default function ShowPlansPage() {
@@ -88,10 +89,13 @@ export default function ShowPlansPage() {
             </td>
 
             <td class="py-4 px-6">
-                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" 
+                <button type="button" class="text-white bg-[#F9FAFB] hover:bg-[#E02424]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" 
                     onClick={()=>{
                         handleDelete(plan.id)}
-                    }>Delete</button>
+                    }>
+                    <Trash class = "mr-2 -ml-1 w-4 h-4"  />
+                    
+                    </button>
             </td>
         </tr>
             )

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
 import { createPlan } from "../services/fetchService"
+import RotateRight from "../icons/Reset"
 
 
 export default function CreatePage() {
@@ -52,15 +53,13 @@ export default function CreatePage() {
         <div>
             
             <form>
-    <div class="grid gap-6 mb-6 md:grid-cols-2">
+            <h3 class = "text-center"><b>Create </b></h3>
+            <hr class="my-5 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
+
+    <div class="grid gap-6 mb-6 md:grid-cols-1 pt-15">
+        
         <div>
-            <label for="id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">ID</label>
-            <input type="number" id="id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" Enter the id_no" required=""
-                value={id} onChange={handleId} disabled>
-            </input>
-        </div>
-        <div>
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 pt-5">Name</label>
             <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" Enter the name" required=""
                 value={name} onChange={handleName}>
         </input>
@@ -77,13 +76,22 @@ export default function CreatePage() {
                 value={validity} onChange={handleValidity}>
             </input>
         </div>
+
+    <div class="grid gap-6 mb-6 md:grid-cols-2 pt-5">
         
     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         onClick={()=>{
             doCreate()
         }}>Submit</button>
-    <button type="cancle" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        onClick={doReset}>Reset</button>
+    <button type="cancle" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center inline-flex dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        onClick={doReset}>
+        <span class="pr-3">
+       <RotateRight class = "mr-2 -ml-1 w-4 h-4"  /> 
+       </span>
+        Reset
+        
+        </button>
+    </div>
     </div>
     </form>
         </div>
