@@ -40,17 +40,20 @@ export default function App() {
                     </div> */}
                     
                     <div className="w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                        <NavLink to="" aria-current="true" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-t-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"}>
-                            show
+                        <a href="http://localhost:3000/" aria-current="true" className="block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+                            Home
+                        </a>
+                        <NavLink to="" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"}>
+                            Show
                         </NavLink>
                         <NavLink to="create" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"}>
-                            create
+                            Create
                         </NavLink>
                         <NavLink to="update" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"}>
-                            update
+                            Update
                         </NavLink>
                         <NavLink to="getbyid" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"}>
-                            find
+                            Find
                         </NavLink>
                     </div>
 
