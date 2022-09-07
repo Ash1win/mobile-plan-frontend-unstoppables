@@ -4,6 +4,8 @@ import GetByIdPage from "./components/GetByIdPage";
 import ShowPlansPage from "./components/ShowPlansPage";
 import UpdatePage from "./components/UpdatePage";
 import { NavLink } from "react-router-dom";
+import hansenlogo from "./images/hansen-primary-logo-normal.png"
+import logo2 from "./images/logo2.png"
 
 
 export default function App() {
@@ -14,14 +16,21 @@ export default function App() {
   return (
     <div>
             {/* heading */}
-            <nav class="bg-slate-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+            <nav class="bg-white  border-b border-slate-300 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
-                    <a href="#" class="flex items-center">
-                        <span class="self-center text-xl font-semibold whitespace-nowrap">Mobile Plan</span>
-                    </a>
+                    <div href="#" class="flex items-center">
+                        {/* hansen logo*/}
+                        <a href="https://hansentech.sharepoint.com/sites/int/Pages/Home.aspx"><img src={hansenlogo} class="h-8 w-42" alt="Hansen Tech." /></a>
+            
+                        {/* logo */}
+                        <img src={logo2} class="h-30 w-36" alt="Mobile Plan" />
+                    </div>  
                 </div>
             </nav>
-            <div className="w-100 h-screen flex bg-violet-400" >
+
+
+
+            <div className="border-b border-slate-300 w-100 h-screen flex bg-violet-400" >
                 {/* side navigation bar */}
                 <div className="w-1/4 h-full text-sm font-medium py-10 px-4 bg-white">
                     {/* <div class="w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
@@ -60,7 +69,7 @@ export default function App() {
 
                 </div>
                 {/* main area */}
-                <div className="w-3/4 h-full pt-10 flex flex-col flex-wrap content-center bg-slate-400">
+                <div className="bg-[url('./images/bg4.png')]  bg-cover w-3/4 h-full pt-10 flex flex-col flex-wrap content-center bg-slate-400">
                     <Routes>
                         <Route path="create" element={<CreatePage />} />
                         <Route path="update" element={<UpdatePage />} />
@@ -70,6 +79,18 @@ export default function App() {
                     </Routes>
                 </div>
             </div>
+
+        {/* footer */}
+        <footer class="px-4 text-white bg-white">
+        
+            <div class="pt-1 mt-5 text-center text-gray-500">
+                © 2022 Hansen Technologies. All rights reserved.
+            </div>
+
+                <div class="pt-2 pb-4 pt-4 mt-2 text-center text-gray-600">
+                    Created By Team  <span className="font-bold">UNSTOPPABLES</span> 
+                    </div>
+        </footer>
       </div>
   )
 }

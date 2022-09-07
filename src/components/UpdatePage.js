@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { useLocation } from "react-router-dom"
 import App from "../App"
 import { getPlanById, updatePlan } from "../services/fetchService"
 import { getAllPlans } from "../services/fetchService"
 
 
 export default function UpdatePage() {
-
-
-    // console.log(useLocation().pathname)
 
     
     const[id, setID] = useState('')
@@ -31,7 +27,7 @@ export default function UpdatePage() {
     },[])
 
     function doUpdate(){
-        if(id!='' && name!='' && description!='' && validity!=''){
+        if(id!='' && name!='' && description!='' && validity!='null'){
             updatePlan({
                 "id": id,
                 "name": name,
@@ -68,7 +64,7 @@ export default function UpdatePage() {
 
     // eslint-disable-next-line no-lone-blocks
         return (
-            <div className="w-3/4 h-full pt-10 flex flex-col flex-wrap content-center bg-slate-400">
+            <div className="w-3/4 h-full pt-10 flex flex-col flex-wrap content-center">
                     <form>
                     <center>
                         <h3><b>Update</b></h3>

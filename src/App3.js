@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom"
 import img1 from "./images/MicrosoftTeams-image.png"
+import hansenlogo from "./images/hansen-primary-logo-normal.png"
+import logo2 from "./images/logo2.png"
 
 export default function App3() {
     return (
@@ -7,15 +9,14 @@ export default function App3() {
     
 <nav class="bg-white-600 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-      <a href="https://flowbite.com/" class="flex items-center">
-        {/* ------------- */}
-          <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Mobile Plan</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-      </button>
+      <div href="#" class="flex items-center">
+        {/* hansen logo*/}
+          <a href="https://hansentech.sharepoint.com/sites/int/Pages/Home.aspx"><img src={hansenlogo} class="h-8 w-42" alt="Hansen Tech." /></a>
+          
+        {/* logo */}
+        <img src={logo2} class="h-30 w-36" alt="Mobile Plan" />
+      </div>
+     
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
@@ -51,7 +52,7 @@ export default function App3() {
                 </h1>
                 <p class="pr-0 mb-8 text-base text-gray-600 sm:text-lg xl:text-xl lg:pr-20">
                     TURNING TODAY´S UTILITIES AND TELECOMS INTO TOMORROW’S
-NEXT DIGITALLY-DRIVEN EXPERIENCE COMPANIES
+                        NEXT DIGITALLY-DRIVEN EXPERIENCE COMPANIES
                 </p>
                 
                 <NavLink to="/app" className="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0">
@@ -212,10 +213,6 @@ NEXT DIGITALLY-DRIVEN EXPERIENCE COMPANIES
                         </blockquote>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>
@@ -225,11 +222,11 @@ NEXT DIGITALLY-DRIVEN EXPERIENCE COMPANIES
     <div id="mentor"
         class="flex items-center justify-center w-full px-8 py-10 border-gray-200">
         <div class="flex-col items-center ">
-                <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
+            <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
                     <h2
                         class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
                             Mentor
-                        </h2>
+                    </h2>
                 <blockquote
                                     class=" mt-20 flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
                                     <div class="flex flex-col pr-8">
@@ -249,24 +246,24 @@ NEXT DIGITALLY-DRIVEN EXPERIENCE COMPANIES
                                     <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
                                         src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
                                         alt="" />
-                                </blockquote>
-                            </div>
-                        </div>
+                    </blockquote>
+            </div>
         </div>
+    </div>
 
 
 
-    <footer class="px-4 text-white bg-white border-t border-gray-200">
-        
-        <div class="pt-4 mt-5 text-center text-gray-500 border-t border-gray-100">
-            © 2022 Hansen Technologies. All rights reserved.
-        </div>
+        <footer class="text-white bg-white border-t border-gray-200">
+            
+            <div class="mt-5 text-center text-gray-500">
+                © 2022 Hansen Technologies. All rights reserved.
+            </div>
 
-            <div class="pt-2 pt-4 mt-2 text-center text-gray-600 border-t border-gray-100">
-                Created By Team  <span className="font-bold">UNSTOPPABLES</span> 
+                <div class="mt-2 text-center text-gray-600">
+                    Created By Team  <span className="font-bold">UNSTOPPABLES</span> 
                 </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 </div>
     )
 }
