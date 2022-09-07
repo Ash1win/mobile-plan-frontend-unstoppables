@@ -34,7 +34,7 @@ export default function GetByIdPage() {
 
     return (
         <div>
-                    <h3 class="text-center pt-10"><b>Search Elements by ID</b></h3>
+                    <h3 class="text-center text-white text-lg pt-10"><b>Search Elements by ID</b></h3>
                     <hr class="my-5 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
                     <br>
                     </br>
