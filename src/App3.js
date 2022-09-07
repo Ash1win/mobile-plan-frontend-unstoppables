@@ -2,6 +2,13 @@ import { NavLink } from "react-router-dom"
 import img1 from "./images/MicrosoftTeams-image.png"
 import hansenlogo from "./images/hansen-primary-logo-normal.png"
 import logo2 from "./images/logo2.png"
+import Ashwini from "./images/Ashwini.jpeg"
+import Shrineeta from "./images/Shrineeta.jpg"
+import Devyani from "./images/Devyani.jpeg"
+import Ashwin from "./images/Ashwin.jpeg"
+import Anurag from "./images/Anurag.jpeg"
+import Yash from "./images/Yash.jpeg"
+import Mayur from "./images/Mayur.jpeg"
 
 export default function App3() {
     return (
@@ -94,13 +101,12 @@ export default function App3() {
                                     </svg>
                                 </div>
 
-                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Sandra
-                                    Walton <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                        SomeCompany</span></h3>
+                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Ashwin Naik <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- 
+                                Associate Software Engineer</span></h3>
                                 <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                             </div>
                             <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
+                                src={Ashwin}
                                 alt="" />
                         </blockquote>
                         <blockquote
@@ -114,13 +120,12 @@ export default function App3() {
                                     </svg>
                                     
                                 </div>
-                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Kenny
-                                    Jones <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                        SomeCompany</span></h3>
+                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Shrineeta Kurud <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- 
+                                    Associate Software Engineer</span></h3>
                                 <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                             </div>
                             <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                src="https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
+                                src={Shrineeta}
                                 alt="" />
                         </blockquote>
 
@@ -135,13 +140,12 @@ export default function App3() {
                                     </svg>
                                 </div>
 
-                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Sandra
-                                    Walton <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                        SomeCompany</span></h3>
+                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Yash Saraf<span class="mt-1 text-sm leading-5 text-gray-500 truncate">- 
+                                    Associate Software Engineer</span></h3>
                                 <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                             </div>
                             <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
+                                src={Yash}
                                 alt="" />
                         </blockquote>
                     </div>
@@ -160,13 +164,13 @@ export default function App3() {
                                     
                                 </div>
 
-                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Mike Smith
-                                    <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO SomeCompany</span>
+                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Anurag Namdev
+                                    <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- Associate Software Engineer</span>
                                 </h3>
                                 <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                             </div>
                             <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80"
+                                src={Anurag}
                                 alt="" />
                         </blockquote>
                         <blockquote
@@ -181,13 +185,12 @@ export default function App3() {
                                     
                                 </div>
 
-                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Molly
-                                    Sanchez <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                        SomeCompany</span></h3>
+                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Devyani Sharma <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- 
+                                    Associate Software Engineer</span></h3>
                                 <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                             </div>
                             <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+                                src={Devyani}
                                 alt="" />
                         </blockquote>
 
@@ -202,17 +205,20 @@ export default function App3() {
                                     </svg>
                                 </div>
 
-                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Sandra
-                                    Walton <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                        SomeCompany</span></h3>
+                                <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Ashwini Patil <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- 
+                                    Associate Software Engineer</span></h3>
                                 <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                             </div>
                             <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
+                                src={Ashwini}
                                 alt="" />
                         </blockquote>
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
     </div>
@@ -222,11 +228,11 @@ export default function App3() {
     <div id="mentor"
         class="flex items-center justify-center w-full px-8 py-10 border-gray-200">
         <div class="flex-col items-center ">
-            <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
+                <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
                     <h2
                         class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
                             Mentor
-                    </h2>
+                        </h2>
                 <blockquote
                                     class=" mt-20 flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
                                     <div class="flex flex-col pr-8">
@@ -238,18 +244,17 @@ export default function App3() {
                                             </svg>
                                         </div>
 
-                                        <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Sandra
-                                            Walton <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                                SomeCompany</span></h3>
+                                        <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Mayur Chaudhari <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- 
+                                        Associate Test Engineer</span></h3>
                                         <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                                     </div>
                                     <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                        src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
+                                        src={Mayur}
                                         alt="" />
-                    </blockquote>
-            </div>
+                                </blockquote>
+                            </div>
+                        </div>
         </div>
-    </div>
 
 
 
