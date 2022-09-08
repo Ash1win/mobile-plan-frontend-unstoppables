@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { toast } from "react-toastify"
 import App from "../App"
 import { getPlanById, updatePlan } from "../services/fetchService"
 import { getAllPlans } from "../services/fetchService"
@@ -27,15 +28,19 @@ export default function UpdatePage() {
     },[])
 
     function doUpdate(){
-        if(id!='' && name!='' && description!='' && validity!='null'){
+        if(id!='' && name!='' && description!='' && validity!=''){
             updatePlan({
                 "id": id,
                 "name": name,
                 "description": description,
                 "validity": validity
-            }).then((res)=>console.log(res))
+            }).then((res)=>{
+                console.log(res)
+                toast.success("plan updated")
+            })
         }else{
             console.log('+++++not validated++++++++')
+            toast.error("all fileds are required!")
         }
     }
 
@@ -60,6 +65,7 @@ export default function UpdatePage() {
         setDescription('')
         setName('')
         setValidity('')
+        toast.info("form reseted")
     }
 
     // eslint-disable-next-line no-lone-blocks

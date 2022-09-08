@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import CreatePage from "./components/CreatePage";
 import GetByIdPage from "./components/GetByIdPage";
 import ShowPlansPage from "./components/ShowPlansPage";
@@ -11,12 +11,27 @@ import Search from "./icons/find";
 import Home from "./icons/home";
 import Show from "./icons/show";
 import Update from "./icons/update";
+import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default function App() {
 
     let activeClassName = "text-white bg-blue-700"
     let isActive = false
+    const location = useLocation()
+
+    const [isShowActive,setIsShowActive] = useState(false)
+
+    useEffect(() => {
+        if(location.pathname == "/app"){
+            setIsShowActive(true)
+        }else {
+            setIsShowActive(false)
+        }
+    } , [location])
+
 
   return (
     <div>
@@ -61,13 +76,19 @@ export default function App() {
                             </span>
                             Home
                         </a>
-                        <NavLink to="" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
-                             
+                        <NavLink to="" className={isShowActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex" } >                             
                             <span class="pr-6">
                                 <Show class = "mr-2 -ml-1 w-4 h-4"  /> 
                             </span>
                             Show
                         </NavLink>
+                        {/* <NavLink to="" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
+                             
+                            <span class="pr-6">
+                                <Show class = "mr-2 -ml-1 w-4 h-4"  /> 
+                            </span>
+                            Show
+                        </NavLink> */}
                         <NavLink to="create" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
                             
                             <span class="pr-6">
@@ -101,6 +122,7 @@ export default function App() {
                         <Route path="getbyid" element={<GetByIdPage />} />
                     </Routes>
                 </div>
+                <ToastContainer />
             </div>
 
         {/* footer */}

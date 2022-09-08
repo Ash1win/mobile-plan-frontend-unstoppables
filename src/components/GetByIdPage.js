@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { getPlanById } from "../services/fetchService"
 import { useLocation } from "react-router-dom"
+import { toast } from "react-toastify"
 
 
 export default function GetByIdPage() {
@@ -24,6 +25,7 @@ export default function GetByIdPage() {
             setPlan(res)
         }).catch((ex)=>{
             console.log(ex)
+            toast.error("id does not exist")
         })
     }
 
@@ -50,10 +52,10 @@ export default function GetByIdPage() {
               <button onClick={doReset} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-1 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Reset</button>
               </div>
               </div>
-              <div class=" mt-20 overflow-x-auto relative shadow-md sm:rounded-lg">
+              <div class=" mt-20 overflow-x-auto relative shadow-md">
 
-<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+<table class="w-full text-sm text-left text-gray-800 dark:text-gray-400 ">
+    <thead class="text-xs text-white bg-slate-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
             <th scope="col" class="py-3 px-6">
                 Sr.No
