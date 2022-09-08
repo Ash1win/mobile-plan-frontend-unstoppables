@@ -14,7 +14,7 @@ export default function App3() {
     return (
         <div class="overflow-x-hidden antialiased">
     
-<nav class="bg-white-600 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+<nav class="bg-white-600 border-gray-200 ml-2 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <div href="#" class="flex items-center">
         {/* hansen logo*/}
@@ -245,7 +245,7 @@ export default function App3() {
                                         </div>
 
                                         <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Mayur Chaudhari <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- 
-                                        Associate Test Engineer</span></h3>
+                                        </span></h3>
                                         <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                                     </div>
                                     <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
