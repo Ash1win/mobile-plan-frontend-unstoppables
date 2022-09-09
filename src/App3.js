@@ -225,7 +225,7 @@ export default function App3() {
     {/* <!-- End Testimonials--> */}
 
     {/* mentor */}
-    <div id="mentor"
+    {/* <div id="mentor"
         class="flex items-center justify-center w-full px-8 py-10 border-gray-200">
         <div class="flex-col items-center ">
                 <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
@@ -254,7 +254,7 @@ export default function App3() {
                                 </blockquote>
                             </div>
                         </div>
-        </div>
+        </div> */}
 
 
 

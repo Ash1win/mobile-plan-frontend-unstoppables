@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useLocation } from "react-router-dom"
 import { createPlan } from "../services/fetchService"
 import RotateRight from "../icons/Reset"
+import { toast } from "react-toastify"
 
 
 export default function CreatePage() {
@@ -45,14 +46,23 @@ export default function CreatePage() {
                 "name": name,
                 "description": description,
                 "validity": validity
-            }).then((res)=>console.log(res))
-        }else{console.log("+++++Not Created+++++++")}
+            }).then((res)=>{
+                console.log(res)
+                if(res) {
+                    toast.success("mobile plan created")
+                    doReset()
+                }
+            })
+        }else{
+            console.log("+++++Not Created+++++++")
+            toast.error("all fields are required")
+        }
     }
 
     return (
         <div>
             
-            <form>
+            <div>
             <h3 class = "text-center text-white text-lg "><b>Create </b></h3>
             <hr class="my-5 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
@@ -90,7 +100,7 @@ export default function CreatePage() {
         </button>
     </div>
     </div>
-    </form>
+    </div>
         </div>
            )
 }
