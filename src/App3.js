@@ -8,7 +8,6 @@ import Devyani from "./images/Devyani.jpeg"
 import Ashwin from "./images/Ashwin.jpeg"
 import Anurag from "./images/Anurag.jpeg"
 import Yash from "./images/Yash.jpeg"
-import Mayur from "./images/Mayur.jpeg"
 
 export default function App3() {
     return (
@@ -18,7 +17,7 @@ export default function App3() {
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <div href="#" class="flex items-center">
         {/* hansen logo*/}
-          <a href="https://hansentech.sharepoint.com/sites/int/Pages/Home.aspx"><img src={hansenlogo} class="h-8 w-42" alt="Hansen Tech." /></a>
+          <a href="https://www.hansencx.com"><img src={hansenlogo} class="h-8 w-42" alt="Hansen Tech." /></a>
           
         {/* logo */}
         <img src={logo2} class="h-30 w-36" alt="Mobile Plan" />
@@ -30,18 +29,22 @@ export default function App3() {
             <NavLink to="" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</NavLink>
           </li>
           <li>
-            <NavLink to="app"class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Show</NavLink>
+            <NavLink to="app"class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                View</NavLink>
           </li>
 
           <li>
-            <NavLink to="app/getbyid"class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Get By ID</NavLink>
+            <NavLink to="app/getbyid"class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Get By ID</NavLink>
           </li>
 
           <li>
-            <NavLink to="app/create" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Create</NavLink>
+            <NavLink to="app/create" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Create</NavLink>
           </li>
           <li>
-            <NavLink to="app/update" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Update</NavLink>
+            <NavLink to="app/update" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Update</NavLink>
           </li>
           
         </ul>

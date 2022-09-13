@@ -40,7 +40,7 @@ export default function App() {
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                     <div href="#" class="flex items-center p-2 mt-0 ml-0">
                         {/* hansen logo*/}
-                        <a href="https://hansentech.sharepoint.com/sites/int/Pages/Home.aspx"><img src={hansenlogo} class="h-8 w-42" alt="Hansen Tech." /></a>
+                        <a href="https://www.hansencx.com"><img src={hansenlogo} class="h-8 w-42" alt="Hansen Tech." /></a>
             
                         {/* logo */}
                         <img src={logo2} class=" h-30 w-36" alt="Mobile Plan" />
@@ -80,7 +80,7 @@ export default function App() {
                             <span class="pr-6">
                                 <Show class = "mr-2 -ml-1 w-4 h-4"  /> 
                             </span>
-                            Show
+                            View
                         </NavLink>
                         {/* <NavLink to="" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
                              

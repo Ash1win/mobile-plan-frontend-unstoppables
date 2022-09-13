@@ -35,9 +35,12 @@ export default function UpdatePage() {
                 "description": description,
                 "validity": validity
             }).then((res)=>{
-                console.log(res)
-                toast.success("plan updated")
-            })
+                if(res){
+                    toast.success("plan updated")
+                    doReset()
+            }else{
+                toast.error("ID does not exist!")
+            }})
         }else{
             console.log('+++++not validated++++++++')
             toast.error("all fileds are required!")
@@ -65,7 +68,6 @@ export default function UpdatePage() {
         setDescription('')
         setName('')
         setValidity('')
-        toast.info("form reseted")
     }
 
     // eslint-disable-next-line no-lone-blocks
@@ -80,7 +82,7 @@ export default function UpdatePage() {
 
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
                             <div>
-                                <label for="ID" class="block mb-2 text-sm font-medium text-white  dark:text-gray-300">ID</label>
+                                <label for="ID" class="block mb-2 text-sm font-medium text-white  dark:text-gray-300">ID*</label>
                                 <input type="number" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     value={id} onChange={handleId}>
                                 </input>
@@ -101,11 +103,15 @@ export default function UpdatePage() {
                                 </input>
                             </div>
                             <div>
-                                <label for="Validity" class="block mb-2 text-sm font-medium text-white  dark:text-gray-300">Validity</label>
+                                <label for="Validity" class="block mb-2 text-sm font-medium text-white  dark:text-gray-300">Validity (in days)</label>
                                 <input type="number" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     value={validity} onChange={handleValidity}>
                                 </input>
                             </div>
+                        </div>
+
+                        <div class="block text-sm font-small text-white  dark:text-gray-300">
+                            ( * indicates a required field )
                         </div>
 
 

@@ -49,7 +49,7 @@ export async function updatePlan(data) {
     body: JSON.stringify(data)
   });
 
-  return response.ok
+  return response.ok;
 
 }
 
