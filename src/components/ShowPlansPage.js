@@ -28,7 +28,7 @@ export default function ShowPlansPage() {
             }
             decrement();
             getAllPlans().then((res) => {
-                setAllMobilePlans(res);
+                setAllMobilePlans(res.reverse());
             })
         })
         
@@ -42,7 +42,7 @@ export default function ShowPlansPage() {
 
     useEffect(() => {
         getAllPlans().then((res) => {
-            setAllMobilePlans(res);
+            setAllMobilePlans(res.reverse());
             // setMobilePlans(res.slice(startIndex,endIndex))
             setMobilePlans(res.slice(startIndex,endIndex))
         })
