@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom"
 import doUpdate from "./UpdatePage";
 import Trash from "../icons/icons";
 import { toast } from "react-toastify";
+import ShowEmpPage from "./ShowEmpPage";
 
 
 export default function ShowPlansPage() {

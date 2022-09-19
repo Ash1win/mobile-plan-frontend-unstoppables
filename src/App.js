@@ -3,6 +3,8 @@ import CreatePage from "./components/CreatePage";
 import GetByIdPage from "./components/GetByIdPage";
 import ShowPlansPage from "./components/ShowPlansPage";
 import UpdatePage from "./components/UpdatePage";
+import ShowEmpPage from "./components/ShowEmpPage";
+import AssignPlanPage from "./components/AssignPlanPage";
 import { NavLink } from "react-router-dom";
 import hansenlogo from "./images/hansen-primary-logo-normal.png"
 import logo2 from "./images/logo2.png"
@@ -103,12 +105,26 @@ export default function App() {
                             </span>
                             Update
                         </NavLink>
-                        <NavLink to="getbyid" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
+                        <NavLink to="getbyid" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
                             
                             <span class="pr-6">
                                 <Search class = "mr-2 -ml-1 w-4 h-4"  /> 
                             </span>
                             Find
+                        </NavLink>
+                        <NavLink to="showemp" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
+                            
+                            <span class="pr-6">
+                                <Search class = "mr-2 -ml-1 w-4 h-4"  /> 
+                            </span>
+                            Show Employees
+                        </NavLink>
+                        <NavLink to="assignplan" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
+                            
+                            <span class="pr-6">
+                                <Search class = "mr-2 -ml-1 w-4 h-4"  /> 
+                            </span>
+                            assign plan
                         </NavLink>
                     </div>
                 </div>
@@ -118,6 +134,8 @@ export default function App() {
                         <Route path="create" element={<CreatePage />} />
                         <Route path="update" element={<UpdatePage />} />
                         <Route path="update/:id" element={<UpdatePage />} />
+                        <Route path="showemp" element={<ShowEmpPage />} />
+                        <Route path="assignplan" element={<AssignPlanPage />} />
                         <Route index element={<ShowPlansPage />} />
                         <Route path="getbyid" element={<GetByIdPage />} />
                     </Routes>
