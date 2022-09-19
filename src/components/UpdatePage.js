@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useSearchParams } from "react-router-dom"
 import { toast } from "react-toastify"
 import App from "../App"
 import { getPlanById, updatePlan } from "../services/fetchService"
@@ -15,16 +15,25 @@ export default function UpdatePage() {
     const[validity, setValidity] = useState('')
 
     let params = useParams()
+    const [searchParams] = useSearchParams()
+    console.log(searchParams.get('name'))
+    console.log(searchParams.get('description'))
+    console.log(searchParams.get('validity'))
     useEffect(()=>{
-        console.log(params.id)
-        if(params.id){
-            getPlanById(params.id).then((res)=>{
-                setID(res.id)
-                setName(res.name)
-                setDescription(res.description)
-                setValidity(res.validity)
-            })
-        }
+        // console.log(params.id)
+        // if(params.id){
+        //     getPlanById(params.id).then((res)=>{
+        //         setID(res.id)
+        //         setName(res.name)
+        //         setDescription(res.description)
+        //         setValidity(res.validity)
+        //     })
+        // }
+
+            setID(params.id)
+            setName(searchParams.get('name'))
+            setDescription(searchParams.get('description'))
+            setValidity(searchParams.get('validity'))
     },[])
 
     function doUpdate(){

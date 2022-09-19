@@ -15,21 +15,27 @@ export default function ShowPlansPage() {
     const [incr, setIncr] = useState(5)
     const [startIndex, setStartIndex] = useState(0)
     const[endIndex, setEndIndex] = useState(5)
+    const [chnge, setChnge] = useState(0)
 
     // console.log(useLocation().pathname)
 
     
     function handleDelete(id){
+        // setMobilePlans([])
         deletePlan(id).then((res) => {
             if(res == true) {
                 toast.info("mobile plan deleted")
+                
+                getAllPlans().then((res) => {
+                    setAllMobilePlans(res.reverse())
+                    setMobilePlans(AllMobilePlans.slice(startIndex,endIndex))
+                    setChnge(chnge+1)
+                    
+                })
             }else {
                 toast.error("connection error!")
             }
-            decrement();
-            getAllPlans().then((res) => {
-                setAllMobilePlans(res.reverse());
-            })
+            
         })
         
     }
@@ -69,7 +75,7 @@ export default function ShowPlansPage() {
 
         setMobilePlans(AllMobilePlans.slice(startIndex,endIndex))
 
-    },[startIndex, endIndex])
+    },[startIndex, endIndex, chnge])
 
 
     function increment(){
@@ -147,7 +153,7 @@ export default function ShowPlansPage() {
             <td class="py-4 px-6">
             <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" 
                 onClick={()=>handleUpdate(plan)
-                }> <NavLink to={`/app/update/${plan.id}`}>Update</NavLink></button>
+                }> <NavLink to={`/app/update/${plan.id}?name=${plan.name}&description=${plan.description}&validity=${plan.validity}`}>Update</NavLink></button>
             </td>
 
             <td class="py-4 px-6">
