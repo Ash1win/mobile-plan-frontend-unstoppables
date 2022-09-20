@@ -13,6 +13,8 @@ import Search from "./icons/find";
 import Home from "./icons/home";
 import Show from "./icons/show";
 import Update from "./icons/update";
+import Employee from "./icons/employee";
+import Plus from "./icons/plus";
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -115,16 +117,16 @@ export default function App() {
                         <NavLink to="showemp" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
                             
                             <span class="pr-6">
-                                <Search class = "mr-2 -ml-1 w-4 h-4"  /> 
+                                <Employee class = "mr-2 -ml-1 w-4 h-4"  /> 
                             </span>
                             Show Employees
                         </NavLink>
                         <NavLink to="assignplan" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
                             
                             <span class="pr-6">
-                                <Search class = "mr-2 -ml-1 w-4 h-4"  /> 
+                                <Plus class = "mr-2 -ml-1 w-4 h-4"  /> 
                             </span>
-                            assign plan
+                            Assign Plan
                         </NavLink>
                     </div>
                 </div>
