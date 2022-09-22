@@ -39,11 +39,10 @@ export default function App() {
             <nav class="bg-white  border-b border-slate-300 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                     <div href="#" class="flex items-center p-2 mt-0 ml-0">
-                        {/* hansen logo*/}
-                        <a href="https://www.hansencx.com"><img src={hansenlogo} class="h-8 w-42" alt="Hansen Tech." /></a>
-            
+                    <div>
                         {/* logo */}
-                        <img src={logo2} class=" h-30 w-36" alt="Mobile Plan" />
+                        <img src={logo2} class="h-14 w-56" alt="Mobile Plan" />
+                    </div>
                     </div>  
                 </div>
             </nav>
