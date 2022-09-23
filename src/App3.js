@@ -15,10 +15,13 @@ export default function App3() {
 
             <nav class="bg-white-600 border-gray-200 ml-2 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
                 <div class="container flex flex-wrap justify-between items-center mx-auto pt-2">
+
                     <div>
                         {/* logo */}
                         <img src={logo2} class="h-14 w-56" alt="Mobile Plan" />
                     </div>
+
+                    {/*Navigation Bar*/}
 
                     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -50,7 +53,7 @@ export default function App3() {
             </nav>
 
 
-            {/* <!-- BEGIN HERO SECTION --> */}
+            {/* <!-- BEGIN MAIN SECTION --> */}
             <div class="relative items-center justify-center w-full overflow-x-hidden lg:pt-10 lg:pb-10">
                 <div class="container flex flex-col items-center justify-between h-full max-w-6xl px-8 mx-auto -mt-32 lg:flex-row xl:px-0">
                     <div class="z-30 flex flex-col items-center w-full max-w-xl pt-48 text-center lg:items-start lg:w-1/2 lg:pt-20 xl:pt-40 lg:text-left">
@@ -73,7 +76,7 @@ export default function App3() {
                         </div>
                     </div>
                 </div>
-                {/* <!-- HERO SECTION END --> */}
+                {/* <!-- MAIN SECTION END --> */}
 
 
                 {/* <!-- Start Testimonials --> */}
@@ -257,7 +260,7 @@ export default function App3() {
         </div> */}
 
 
-
+                {/*Footer*/}
                 <footer class="text-white bg-white border-t border-gray-200">
 
                     <div class="mt-5 text-center text-gray-500">

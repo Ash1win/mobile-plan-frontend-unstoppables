@@ -28,9 +28,7 @@ export async function createPlan(data) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
-    },
-    //redirect: 'follow',
-    //referrerPolicy: 'no-referrer', 
+    }, 
     body: JSON.stringify(data)
   });
   return response.json();
