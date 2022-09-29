@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useParams, useSearchParams } from "react-router-dom"
 import { toast } from "react-toastify"
 import { updatePlan } from "../services/fetchService"
@@ -12,6 +13,13 @@ export default function UpdatePage() {
     const [description, setDescription] = useState('')
     const [validity, setValidity] = useState('')
 
+    const [id2, setID2] = useState('')
+    const [name2, setName2] = useState('')
+    const [description2, setDescription2] = useState('')
+    const [validity2, setValidity2] = useState('')
+
+    const navigate = useNavigate()
+
     let params = useParams()
     const [searchParams] = useSearchParams()
     console.log(searchParams.get('name'))
@@ -24,9 +32,20 @@ export default function UpdatePage() {
         setDescription(searchParams.get('description'))
         setValidity(searchParams.get('validity'))
         console.log(name)
+
+        setID2(params.id)
+        setName2(searchParams.get('name'))
+        setDescription2(searchParams.get('description'))
+        setValidity2(searchParams.get('validity'))
+
     }, [])
 
     function doUpdate() {
+        if(name===name2 && description===description2 && validity===validity2){
+            toast.warn("Can not update! No changes in any field.")
+            return;
+        }
+
         if ((id != '' && name != '' && description != '' && validity != '')
             && (id != null && name != null && description != null && validity != null)) {
             updatePlan({
@@ -37,7 +56,7 @@ export default function UpdatePage() {
             }).then((res) => {
                 if (res) {
                     toast.success("plan updated")
-                    doReset()
+                    navigate("/app")
                 } else {
                     toast.error("ID does not exist!")
                 }

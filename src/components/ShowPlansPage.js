@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import doUpdate from "./UpdatePage";
 import Trash from "../icons/icons";
 import { toast } from "react-toastify";
+import DeleteConfirmation from "./DeleteConfirmation";
 
 
 export default function ShowPlansPage() {
@@ -15,7 +16,21 @@ export default function ShowPlansPage() {
     const [endIndex, setEndIndex] = useState(6)
     const [chnge, setChnge] = useState(0)
 
-    function handleDelete(id) {
+    //for delete box
+    const [deleteId, setDeleteId] = useState(0)
+    const [showDialogBox, setShowDialogBox] = useState(false)
+
+
+    function handleHideDialogBox(){
+        setShowDialogBox(false)
+    }
+
+    
+    function handleShowDialogBox(){
+        setShowDialogBox(false)
+    }
+
+    function doDelete(id){
         deletePlan(id).then((res) => {
             if (res == true) {
                 toast.info("mobile plan deleted")
@@ -29,8 +44,16 @@ export default function ShowPlansPage() {
             } else {
                 toast.error("connection error!")
             }
-
         })
+
+        setShowDialogBox(false)
+    }
+
+    function handleDelete(id) {
+
+        setDeleteId(id)
+        setShowDialogBox(true)
+        
 
     }
 
@@ -73,6 +96,8 @@ export default function ShowPlansPage() {
 
     return (
         <div className="m-0 mt-0 mb-24">
+
+            <DeleteConfirmation doDelete={doDelete} handleHideDialogBox={handleHideDialogBox} show={showDialogBox} deleteId={deleteId}/>
 
             {/*Heading*/}
 
