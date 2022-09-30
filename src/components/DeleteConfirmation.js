@@ -2,7 +2,7 @@ import React from "react";
 
 export default function DeleteConfirmation({show, deleteId, handleHideDialogBox, doDelete}){
 
-    console.log(show+"--"+deleteId)
+    // console.log(show+"--"+deleteId)
 
     return(
 
