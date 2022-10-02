@@ -97,7 +97,7 @@ export default function App() {
                 </div>
                 
                 {/* main area */}
-                <div className="bg-[url('./images/bg4.png')]  bg-cover w-3/4 h-full pt-5 flex flex-col flex-wrap content-center bg-slate-400">
+                <div className="bg-[url('./images/bg4.png')]  bg-cover w-full h-full p-20 pt-5 flex flex-col content-center bg-slate-400">
                     <Routes>
                         <Route path="create" element={<CreatePage />} />
                         <Route path="update" element={<UpdatePage />} />
