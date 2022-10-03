@@ -6,6 +6,7 @@ import UpdatePage from "./components/UpdatePage";
 import { NavLink } from "react-router-dom";
 import hansenlogo from "./images/hansen-primary-logo-normal.png"
 import logo2 from "./images/logo2.png"
+import logoNew from "./images/logoNew.png"
 import Create from "./icons/create";
 import Search from "./icons/find";
 import Home from "./icons/home";
@@ -14,6 +15,7 @@ import Update from "./icons/update";
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NavigationBar from "./components/navigationBar";
 
 
 export default function App() {
@@ -36,16 +38,17 @@ export default function App() {
     return (
         <div>
             {/* heading */}
-            <nav class="bg-white  border-b border-slate-300 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+            <NavigationBar />
+            
+            {/* <nav class="bg-white  border-b border-slate-300 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                     <div href="#" class="flex items-center p-2 mt-0 ml-0">
                         <div>
-                            {/* logo */}
-                            <img src={logo2} class="h-14 w-56" alt="Mobile Plan" />
+                            <img src={logoNew} style={{height: 50/1.4, width: 150/1.4}} alt="Mobile Plan" />
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
 
 
 
@@ -70,7 +73,7 @@ export default function App() {
                             View
                         </NavLink>
                         
-                        <NavLink to="create" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
+                        <NavLink to="create" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
 
                             <span class="pr-6">
                                 <Create class="mr-2 -ml-1 w-4 h-4" />
@@ -86,13 +89,13 @@ export default function App() {
                             Update
                         </NavLink> */}
 
-                        <NavLink to="getbyid" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
+                        {/* <NavLink to="getbyid" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex " : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
 
                             <span class="pr-6">
                                 <Search class="mr-2 -ml-1 w-4 h-4" />
                             </span>
                             Find
-                        </NavLink>
+                        </NavLink> */}
                     </div>
                 </div>
                 

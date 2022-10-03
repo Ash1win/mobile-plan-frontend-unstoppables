@@ -70,7 +70,7 @@ export default function CreatePage() {
     return (
         <div>
 
-            <div>
+            <div className="w-full h-full pt-2 flex flex-col flex-wrap content-center">
 
                 {/*Heading*/}
 

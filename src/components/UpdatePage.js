@@ -103,7 +103,7 @@ export default function UpdatePage() {
 
     return (
 
-        <div className="w-3/4 h-full pt-10 flex flex-col flex-wrap content-center">
+        <div className="w-full h-full pt-10 flex flex-col flex-wrap content-center">
             <form>
                 <center>
 

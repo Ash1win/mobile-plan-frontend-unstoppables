@@ -64,14 +64,14 @@ export default function ShowPlansPage() {
                 setEe(6)
                 setSCurrsrch(searchResult.slice(si, ee))
             }else if(srchType === 'name') {
-                let searchResult = AllMobilePlans.filter((plan) => plan.name.toLowerCase().includes(searchText))
+                let searchResult = AllMobilePlans.filter((plan) => plan.name.toLowerCase().includes(searchText.toLowerCase()))
                 console.log(searchResult)
                 setSAllsrch(searchResult)
                 setSi(0)
                 setEe(6)
                 setSCurrsrch(searchResult.slice(si, ee))
             }else if(srchType === 'description') {
-                let searchResult = AllMobilePlans.filter((plan) => plan.description.toLowerCase().includes(searchText))
+                let searchResult = AllMobilePlans.filter((plan) => plan.description.toLowerCase().includes(searchText.toLowerCase()))
                 console.log(searchResult)
                 setSAllsrch(searchResult)
                 setSi(0)
