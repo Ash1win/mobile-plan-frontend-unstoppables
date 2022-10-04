@@ -55,7 +55,7 @@ export default function UpdatePage() {
                 "validity": validity
             }).then((res) => {
                 if (res) {
-                    toast.success("plan updated with id : "+id)
+                    toast.success("Plan updated with id : "+id)
                     navigate("/app")
                 } else {
                     toast.error("ID does not exist!")
@@ -63,7 +63,7 @@ export default function UpdatePage() {
             })
         } else {
             console.log('+++++not validated++++++++')
-            toast.error("all fileds are required!")
+            toast.error("All fileds are required!")
         }
     }
 

@@ -56,13 +56,13 @@ export default function CreatePage() {
             }).then((res) => {
                 console.log(res)
                 if (res) {
-                    toast.success("mobile plan created with Id : " + res.id)
+                    toast.success("Mobile plan created with Id : " + res.id)
                     doReset()
                 }
             })
         } else {
             console.log("+++++Not Created+++++++")
-            toast.error("all fields are required")
+            toast.error("All fields are required")
         }
     }
 
