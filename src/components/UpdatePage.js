@@ -55,7 +55,7 @@ export default function UpdatePage() {
                 "validity": validity
             }).then((res) => {
                 if (res) {
-                    toast.success("plan updated")
+                    toast.success("plan updated with id : "+id)
                     navigate("/app")
                 } else {
                     toast.error("ID does not exist!")

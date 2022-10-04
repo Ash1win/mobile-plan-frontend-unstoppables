@@ -122,7 +122,7 @@ export default function ShowPlansPage() {
     function doDelete(id) {
         deletePlan(id).then((res) => {
             if (res == true) {
-                toast.info("mobile plan deleted")
+                toast.info("mobile plan deleted : "+id)
 
                 getAllPlans().then((res) => {
                     setAllMobilePlans(res.reverse())
@@ -273,22 +273,22 @@ export default function ShowPlansPage() {
 
                 {/*Table to show Mobile Plan Details*/}
 
-                { !isSearching && <table class="w-120 text-sm text-left text-gray-800 dark:text-gray-400 ">
+                { !isSearching && <table class="w-full table-fixed text-sm text-left text-gray-800 dark:text-gray-400 ">
                     <thead class="text-xs text-white bg-slate-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 w-16 ">
                                 Plan No.
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 w-48">
                                 Name
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 w-48">
                                 Description
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3  w-16">
                                 Validity
                             </th>
-                            <td class="py-4 px-6">
+                            <td class="py-4 px-6 ">
 
                             </td>
                             <td class="py-4 px-6">
@@ -300,21 +300,21 @@ export default function ShowPlansPage() {
                         {mobilePlans && mobilePlans.map((plan) => {
                             return (
                                 <tr class="bg-white dark:bg-gray-800">
-                                    <th scope="row" class="py-2 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <th scope="row" class="py-2 px-6 w-16 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         {plan.id}
                                     </th>
-                                    <td class="py-2 px-6">
+                                    <td class="py-2 px-6 w-48">
                                         {plan.name}
                                     </td>
-                                    <td class="py-2 px-6">
+                                    <td class="py-2 px-6 w-48">
                                         {plan.description}
                                     </td>
-                                    <td class="py-2 px-6">
+                                    <td class="py-2 px-6 w-16 ">
                                         {plan.validity}
                                     </td>
 
-                                    <td class="py-2 px-6">
-                                        <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                    <td class="py-2 px-6 ">
+                                        <button type="button" class="focus:outline-none  text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
                                             onClick={() => handleUpdate(plan)
                                             }> <NavLink to={`/app/update/${plan.id}?name=${plan.name}&description=${plan.description}&validity=${plan.validity}`}>Update</NavLink></button>
                                     </td>
@@ -335,19 +335,19 @@ export default function ShowPlansPage() {
 
                     </tbody>
                 </table>}
-                { isSearching && <table class="w-120 text-sm text-left text-gray-800 dark:text-gray-400 ">
+                { isSearching && <table class="w-full table-fixed text-sm text-left text-gray-800 dark:text-gray-400 ">
                     <thead class="text-xs text-white bg-slate-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 w-16">
                                 Plan No.
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 w-48">
                                 Name
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3 px-6 w-48">
                                 Description
                             </th>
-                            <th scope="col" class="py-3 px-6">
+                            <th scope="col" class="py-3  w-16">
                                 Validity
                             </th>
                             <td class="py-4 px-6">
