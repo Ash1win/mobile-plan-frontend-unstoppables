@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../services/authService";
 import { toast, ToastContainer } from "react-toastify";
 
+import logo from "../images/logoNew2.png"
+
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,7 +39,7 @@ export default function LoginPage() {
   return (
     <section class="h-screen">
       <ToastContainer />
-      <div class="container px-6 py-12 h-full">
+      <div class="container px-6 py-6 h-full">
         <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
           <div class="md:w-8/12 lg:w-6/12 p-14 mb-12 md:mb-0">
             <img
@@ -47,6 +49,13 @@ export default function LoginPage() {
             />
           </div>
           <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
+
+          <div className="flex justify-center m-5">
+              <img src={logo} className="h-20 w-48" />
+            </div>
+
+            <hr class="border-2 border-[#c3d7da] cursor-pointer mt-4 mb-6" />
+
             <form onSubmit={handleSubmit}>
               {/* <!-- Email input --> */}
 
@@ -56,7 +65,7 @@ export default function LoginPage() {
                   <h1>Sign In</h1>
               </div>
 
-              <hr class="border-2 border-[#c3d7da] cursor-pointer mt-4 mb-6" />
+              {/* <hr class="border-2 border-[#c3d7da] cursor-pointer mt-4 mb-6" /> */}
 
 
               <div class="mb-6">

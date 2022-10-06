@@ -64,12 +64,12 @@ export default function App3() {
                             NEXT DIGITALLY-DRIVEN EXPERIENCE COMPANIES
                         </p>
 
-                        <NavLink to="/app" className="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0">
+                        <NavLink to="/app" className="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-[#336f7b] border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0">
                             Get Started!
                         </NavLink>
                     </div>
                     <div class="relative z-50 flex flex-col items-end justify-center w-full h-full lg:w-1/2 ms:pl-10">
-                        <div class="container relative left-0 w-full max-w-4xl lg:absolute xl:max-w-6xl lg:w-screen">
+                        <div class="container relative left-0 mt-24 w-full max-w-4xl lg:absolute xl:max-w-6xl lg:w-screen">
                             <img src={img1} class="object-cover lg:mt-24 xl:mt-20 lg:mb-0 lg:h-full lg:-ml-12" />
                             {/* h-auto mt-20 mb-20 ml-0 lg:mt-24 xl:mt-40 lg:mb-0 lg:h-full lg:-ml-12" */}
                         </div>

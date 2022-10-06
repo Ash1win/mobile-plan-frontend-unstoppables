@@ -50,3 +50,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+
+.gradient-header {
+  background: rgb(51,111,123);
+background: linear-gradient(90deg, rgba(51,111,123,1) 50%, rgba(74,166,185,1) 100%);
+}
+
+.gradient-main {
+  background: rgb(76,126,162);
+background: linear-gradient(90deg, rgba(76,126,162,1) 43%, rgba(109,169,208,1) 100%);
+}
+
+.input-search {
+  position: absolute; 
+  inset: auto auto 0px 0px; 
+  margin: 0px; 
+  transform: translate3d(897px, 5637px, 0px);
+}

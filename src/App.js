@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import hansenlogo from "./images/hansen-primary-logo-normal.png"
 import logo2 from "./images/logo2.png"
 import logoNew from "./images/logoNew.png"
+import bg5 from "./images/bg5.png"
 import Create from "./icons/create";
 import Search from "./icons/find";
 import Home from "./icons/home";
@@ -52,10 +53,10 @@ export default function App() {
 
 
 
-            <div className="border-b border-slate-300 w-100 h-screen flex bg-violet-400" >
+            <div className="border-b border-slate-300 w-100 h-screen flex bg-gray-100" >
 
                 {/* side navigation bar */}
-                <div className="w-1/4 h-full text-sm font-medium py-10 px-4 bg-white">
+                <div className="w-1/4 h-full text-sm font-medium py-10 px-4">
 
 
                     <div className="w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
@@ -66,14 +67,14 @@ export default function App() {
                             </span>
                             Home
                         </a>
-                        <NavLink to="" className={isShowActive ? "block py-2 px-4 w-full text-white bg-blue-700  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"} >
+                        <NavLink to="" className={isShowActive ? "block py-2 px-4 w-full text-white bg-[#336f7b]  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"} >
                             <span class="pr-6">
                                 <Show class="mr-2 -ml-1 w-4 h-4" />
                             </span>
                             View
                         </NavLink>
                         
-                        <NavLink to="create" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-blue-700 rounded-b-lg  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
+                        <NavLink to="create" className={({ isActive }) => isActive ? "block py-2 px-4 w-full text-white bg-[#336f7b] rounded-b-lg  border-b border-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-600 inline-flex" : "block py-2 px-4 w-full border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white inline-flex"}>
 
                             <span class="pr-6">
                                 <Create class="mr-2 -ml-1 w-4 h-4" />
@@ -100,7 +101,7 @@ export default function App() {
                 </div>
                 
                 {/* main area */}
-                <div className="bg-[url('./images/bg4.png')]  bg-cover w-full h-full p-20 pt-5 flex flex-col content-center bg-slate-400">
+                <div className=" bg-[url('./images/bg5.png')]  bg-cover w-full h-full p-20 pt-5 flex flex-col content-center bg-slate-400">
                     <Routes>
                         <Route path="create" element={<CreatePage />} />
                         <Route path="update" element={<UpdatePage />} />

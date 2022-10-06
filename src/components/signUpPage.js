@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { register } from "../services/authService";
+
+import logo from "../images/logoNew2.png"
 
 export default function SignUpPage() {
   const navigate = useNavigate();
@@ -9,6 +11,9 @@ export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [passConf, setPassConf] = useState("");
+
+  const [emailErr, setEmailErr] = useState(false)
+  const [passErr, setPassErr] = useState(false)
 
 
   function handleSubmit(e) {
@@ -28,10 +33,42 @@ export default function SignUpPage() {
     }
   }
 
+  function ValidateEmail(mail) {
+    let reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    return mail.match(reg)
+
+  }
+
+  function validatePassword(password) {
+    let reg = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,}/
+
+    return password.match(reg)
+  }
+
+  function handlePassword(e) {
+    setEmail(e.target.value)
+    // console.log(e.target.value)
+    if(!validatePassword(e.target.value) && e.target.value != '') {
+      setTimeout(() => setPassErr(true), 1000)
+    }else {
+      setTimeout(() => setPassErr(false), 1000)
+    }
+  }
+
+  function handleEmail(e) {
+    setEmail(e.target.value)
+    if(!ValidateEmail(e.target.value) && e.target.value != '') {
+      setTimeout(() => setEmailErr(false), 1000) 
+    }else {
+      setTimeout(() => setEmailErr(true), 1000)
+    }
+  }
+
   return (
     <section class="h-screen">
       <ToastContainer />
-      <div class="container px-6 py-12 h-full">
+      <div class="container px-6 py-6 h-full">
         <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
           <div class="md:w-8/12 lg:w-6/12 p-14 mb-12 md:mb-0">
             <img
@@ -41,6 +78,14 @@ export default function SignUpPage() {
             />
           </div>
           <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
+
+            <div className="flex justify-center m-5">
+              <img src={logo} className="h-20 w-48" />
+            </div>
+
+            <hr class="border-2 border-[#c3d7da] cursor-pointer mt-4 mb-6" />
+
+
             <form onSubmit={handleSubmit}>
 
             <div className="mb-6 text-4xl text-center text-[#336f7b] font-bold"
@@ -49,7 +94,7 @@ export default function SignUpPage() {
                   <h1>Sign Up</h1>
               </div>
 
-              <hr class="border-2 border-[#c3d7da] cursor-pointer mt-4 mb-6" />
+              {/* <hr class="border-2 border-[#c3d7da] cursor-pointer mt-4 mb-6" /> */}
 
               {/* <!-- Email input --> */}
               <div class="mb-6">
@@ -57,19 +102,31 @@ export default function SignUpPage() {
                   type="text"
                   class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                   placeholder="user@example.com"
-                  onChange={(e) => { setEmail(e.target.value) }}
+                  onChange={handleEmail}
                 />
               </div>
+              { emailErr && <div className="mb-4 pl-2 text-red-500">
+                <p className="font-bold">invalid email</p>
+              </div>}
 
               {/* <!-- Password input --> */}
-              <div class="mb-6">
+              <div class="mb-2">
                 <input
                   type="password"
                   class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                   placeholder="Password"
-                  onChange={(e) => { setPass(e.target.value) }}
+                  onChange={handlePassword}
                 />
               </div>
+              { passErr && <div className="mb-4 pl-2 text-red-500">
+                <p className="font-bold">password must contain following</p>
+                  <ul className="list-disc list-inside pl-4">
+                    <li>lower case letter</li>
+                    <li>upper case letter</li>
+                    <li>number</li>
+                    <li>minimum 8 characters</li>
+                  </ul>
+              </div>}
               <div class="mb-6">
                 <input
                   type="password"

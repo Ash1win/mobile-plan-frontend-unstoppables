@@ -197,6 +197,10 @@ export default function ShowPlansPage() {
             {/*Heading*/}
 
             <h3 class="text-center text-white text-lg "><b>All Plans </b></h3>
+            <div className="flex justify-center">
+            <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700 w-48"></hr>
+            </div>
+
             
 
             <div>
@@ -211,8 +215,8 @@ export default function ShowPlansPage() {
                     <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
                         
                     </div>
-                    <div class="relative w-full">
-                        <input type="search" value={searchText} onChange={handleSearch} id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
+                    <div class="relative w-full ">
+                        <input type="search" value={searchText} onChange={handleSearch} id="search-dropdown" class="block  p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
                          placeholder="Search for Mobile Plans by Id" />
                             { isSearching && <button 
                             className="text-red-500 text-3xl absolute top-0 shadow-sm" 
@@ -224,7 +228,7 @@ export default function ShowPlansPage() {
                             >
                                 x
                             </button>}
-                            <button type="submit" onClick={search} className="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <button type="submit" onClick={search} className="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-[#336f7b] rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                 <span class="sr-only">Search</span>
                             </button>
@@ -274,7 +278,7 @@ export default function ShowPlansPage() {
                 {/*Table to show Mobile Plan Details*/}
 
                 { !isSearching && <table class="w-full table-fixed text-sm text-left text-gray-800 dark:text-gray-400 ">
-                    <thead class="text-xs text-white bg-slate-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-xs text-white gradient-header uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="py-3 px-6 w-16 ">
                                 Plan No.
@@ -314,18 +318,18 @@ export default function ShowPlansPage() {
                                     </td>
 
                                     <td class="py-2 px-6 ">
-                                        <button type="button" class="focus:outline-none  text-white bg-purple-700 hover:bg-purple-800 focus:ring-1 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                                        <button type="button" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                                             onClick={() => handleUpdate(plan)
                                             }> <NavLink to={`/app/update/${plan.id}?name=${plan.name}&description=${plan.description}&validity=${plan.validity}`}>Update</NavLink></button>
                                     </td>
 
                                     <td class="py-2 px-6">
-                                        <button type="button" class="text-white bg-red-500 hover:bg-[#E02424]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-2 py-1.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                        <button type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2 mb-2"
                                             onClick={() => {
                                                 handleDelete(plan.id)
                                             }
                                             }>
-                                            <Trash class="mr-2 -ml-1 w-2 h-2" />
+                                            <Trash class="mr-2 -ml-1 w-1 h-1" />
 
                                         </button>
                                     </td>
