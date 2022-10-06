@@ -78,7 +78,20 @@ export default function NavigationBar() {
 
             <li>
               <button
-                className="text-white bg-[#336f7b] p-3 hover:ring hover:ring-blue-500 hover:ring-offset-0"
+                className="text-white bg-[#336f7b] p-3 hover:ring hover:ring-blue-500 hover:ring-offset-0 border-white border-2"
+                style={{
+                  borderRadius: 12
+                }}
+                onClick={() => {
+                  window.open("http://localhost:3001", "_blank")
+                }}
+              >
+                auditlog
+              </button>
+            </li>
+            <li>
+              <button
+                className="ml-3 text-white bg-[#336f7b] p-3 hover:ring hover:ring-blue-500 hover:ring-offset-0 border-white border-2"
                 style={{
                   borderRadius: 12
                 }}
