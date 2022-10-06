@@ -14,10 +14,17 @@ export default function SignUpPage() {
 
   const [emailErr, setEmailErr] = useState(false)
   const [passErr, setPassErr] = useState(false)
+  const [passConfErr, setPassConfErr] = useState(false)
 
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if(pass === '' || passConf === '' || email === '') {
+      toast.error("all fields are required")
+      return;
+    }
+
     if(pass === passConf) {
       register(email, pass).then((res) => {
         if(res.status === 403) {
@@ -34,7 +41,7 @@ export default function SignUpPage() {
   }
 
   function ValidateEmail(mail) {
-    let reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    let reg = /^([a-zA-Z0-9\._])+@([a-zA-Z0-9])+.([a-z]+).([a-z]+)?$/
 
     return mail.match(reg)
 
@@ -47,7 +54,7 @@ export default function SignUpPage() {
   }
 
   function handlePassword(e) {
-    setEmail(e.target.value)
+    setPass(e.target.value)
     // console.log(e.target.value)
     if(!validatePassword(e.target.value) && e.target.value != '') {
       setTimeout(() => setPassErr(true), 1000)
@@ -59,9 +66,25 @@ export default function SignUpPage() {
   function handleEmail(e) {
     setEmail(e.target.value)
     if(!ValidateEmail(e.target.value) && e.target.value != '') {
-      setTimeout(() => setEmailErr(false), 1000) 
+      setTimeout(() => setEmailErr(true), 1000) 
     }else {
-      setTimeout(() => setEmailErr(true), 1000)
+      setTimeout(() => setEmailErr(false), 1000)
+    }
+  }
+
+  function handlePassConf(e) {
+    setPassConf(e.target.value)
+    // console.log(passConf+" :: "+pass)
+    if(e.target.value != '') {
+      if(pass === e.target.value) {
+        setTimeout(() => setPassConfErr(false), 1000)
+        
+      }else {
+        setTimeout(() => setPassConfErr(true), 1000)
+        
+      }
+    }else {
+      setTimeout(() => setPassConfErr(false), 1000)
     }
   }
 
@@ -112,7 +135,7 @@ export default function SignUpPage() {
               {/* <!-- Password input --> */}
               <div class="mb-2">
                 <input
-                  type="password"
+                  type="text"
                   class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                   placeholder="Password"
                   onChange={handlePassword}
@@ -129,12 +152,16 @@ export default function SignUpPage() {
               </div>}
               <div class="mb-6">
                 <input
-                  type="password"
+                  type="text"
                   class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                   placeholder="confirm Password"
-                  onChange={(e) => { setPassConf(e.target.value) }}
+                  onChange={handlePassConf}
                 />
               </div>
+              { passConfErr && <div className="mb-4 pl-2 text-red-500">
+                <p className="font-bold">password must be same</p>
+                </div>
+              }
 
               {/* <!-- Submit button --> */}
               <button
