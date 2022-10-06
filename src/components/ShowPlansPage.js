@@ -11,9 +11,9 @@ export default function ShowPlansPage() {
 
     const [AllMobilePlans, setAllMobilePlans] = useState([])
     const [mobilePlans, setMobilePlans] = useState([])
-    const [incr, setIncr] = useState(6)
+    const [incr, setIncr] = useState(5)
     const [startIndex, setStartIndex] = useState(0)
-    const [endIndex, setEndIndex] = useState(6)
+    const [endIndex, setEndIndex] = useState(5)
     const [chnge, setChnge] = useState(0)
     const [searchText, setSearchText] = useState('')
 
@@ -30,8 +30,8 @@ export default function ShowPlansPage() {
 
     //increment decrement states pagination for search
     const [si, setSi] = useState(0) //start index
-    const [ee, setEe] = useState(6) //end index
-    const [iVal, setIVal] = useState(6)
+    const [ee, setEe] = useState(5) //end index
+    const [iVal, setIVal] = useState(5)
 
     useMemo(() => {
         setSCurrsrch(sAllsrch.slice(si, ee))
@@ -61,21 +61,21 @@ export default function ShowPlansPage() {
                 console.log(searchResult)
                 setSAllsrch(searchResult)
                 setSi(0)
-                setEe(6)
+                setEe(5)
                 setSCurrsrch(searchResult.slice(si, ee))
             }else if(srchType === 'name') {
                 let searchResult = AllMobilePlans.filter((plan) => plan.name.toLowerCase().includes(searchText.toLowerCase()))
                 console.log(searchResult)
                 setSAllsrch(searchResult)
                 setSi(0)
-                setEe(6)
+                setEe(5)
                 setSCurrsrch(searchResult.slice(si, ee))
             }else if(srchType === 'description') {
                 let searchResult = AllMobilePlans.filter((plan) => plan.description.toLowerCase().includes(searchText.toLowerCase()))
                 console.log(searchResult)
                 setSAllsrch(searchResult)
                 setSi(0)
-                setEe(6)
+                setEe(5)
                 setSCurrsrch(searchResult.slice(si, ee))
             }
         }
