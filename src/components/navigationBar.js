@@ -1,5 +1,5 @@
 import logo2 from "../images/logo2.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import newLogo from "../images/logoNew2.png"
@@ -8,9 +8,19 @@ export default function NavigationBar() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
+  const [showAuditApp, setShowAuditApp] = useState(false)
+
+  const location = useLocation()
 
   useEffect(() => {
     let user = localStorage.getItem("user");
+
+    if (location.pathname === "/app") {
+      setShowAuditApp(true)
+  } else {
+      setShowAuditApp(false)
+  }
+
     if (user) {
       console.log("user is present");
       setEmail(user);
@@ -76,19 +86,19 @@ export default function NavigationBar() {
               </div>
             </li>
 
-            <li>
+            {showAuditApp && <li>
               <button
                 className="text-white bg-[#336f7b] p-3 hover:ring hover:ring-blue-500 hover:ring-offset-0 border-white border-2"
                 style={{
                   borderRadius: 12
                 }}
                 onClick={() => {
-                  window.open("http://localhost:3001", "_blank")
+                  window.open("http://localhost:3001/app", "_blank")
                 }}
               >
                 auditlog
               </button>
-            </li>
+            </li>}
             <li>
               <button
                 className="ml-3 text-white bg-[#336f7b] p-3 hover:ring hover:ring-blue-500 hover:ring-offset-0 border-white border-2"

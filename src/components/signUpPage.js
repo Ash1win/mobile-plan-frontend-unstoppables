@@ -41,8 +41,7 @@ export default function SignUpPage() {
   }
 
   function ValidateEmail(mail) {
-    let reg = /^([a-zA-Z0-9\._])+@([a-zA-Z0-9])+.([a-z]+).([a-z]+)?$/
-
+    let reg = /^([a-zA-Z0-9\._])+@([a-zA-Z0-9])+\.([a-z]+)\.?([a-z]+)?$/
     return mail.match(reg)
 
   }
@@ -142,12 +141,13 @@ export default function SignUpPage() {
                 />
               </div>
               { passErr && <div className="mb-4 pl-2 text-red-500">
-                <p className="font-bold">password must contain following</p>
+                <p className="font-bold">password must contain :</p>
                   <ul className="list-disc list-inside pl-4">
-                    <li>lower case letter</li>
-                    <li>upper case letter</li>
-                    <li>number</li>
+                    <li>atleast one lower case letter</li>
+                    <li>atleast one upper case letter</li>
+                    <li>atleast one number</li>
                     <li>minimum 8 characters</li>
+                    <li>one special character</li>
                   </ul>
               </div>}
               <div class="mb-6">

@@ -70,7 +70,11 @@ export default function App3() {
                     </div>
                     <div class="relative z-50 flex flex-col items-end justify-center w-full h-full lg:w-1/2 ms:pl-10">
                         <div class="container relative left-0 mt-24 w-full max-w-4xl lg:absolute xl:max-w-6xl lg:w-screen">
-                            <img src={img1} class="object-cover lg:mt-24 xl:mt-20 lg:mb-0 lg:h-full lg:-ml-12" />
+                            <img src="https://img.freepik.com/premium-vector/mobile-phone-notifications-vector-phone-icon-flat-style-with-notifications_471402-20.jpg?w=2000" 
+                                class="object-cover mt-24 mb-0 ml-12" style={{
+                                    height: "480px",
+                                    
+                                }}/>
                             {/* h-auto mt-20 mb-20 ml-0 lg:mt-24 xl:mt-40 lg:mb-0 lg:h-full lg:-ml-12" */}
                         </div>
                     </div>

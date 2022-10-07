@@ -14,6 +14,21 @@ export default function LoginPage() {
   function handleSubmit(e) {
     e.preventDefault()
 
+    if(email === '' || password === ''){
+      toast.error("Enter email and password!")
+      return
+    }
+
+    if(email === ''){
+      toast.error("Email can not be empty!")
+      return
+    }
+
+    if(password === ''){
+      toast.error("Password can not be empty!")
+      return
+    }
+
     login(email, password).then((res) => {
       if(res.status === 200) {
         toast.success("login success")

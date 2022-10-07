@@ -8,7 +8,7 @@ export default function DeleteConfirmation({show, deleteId, handleHideDialogBox,
 
         <div>
         {show && <div className="deletebox">
-            <div className="bg-white p-4 rounded-lg flex flex-col justify-center align-center shadow-lg">
+            <div className="bg-white p-4 rounded-lg flex flex-col justify-center align-center shadow-lg bg-[#CEE2E3] border-[#336f7b] border border-2">
                 <h1>Are you sure you want to delete Mobile Plan with ID : {deleteId} !</h1>
                 <div className="flex justify-center">
                     <button onClick={()=>doDelete(deleteId)} className="m-3 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-3 border border-red-700 rounded">Confirm</button>
