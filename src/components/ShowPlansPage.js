@@ -196,9 +196,9 @@ export default function ShowPlansPage() {
 
             {/*Heading*/}
 
-            <h3 class="text-center text-white text-lg "><b>All Plans </b></h3>
+            <h3 class="text-center text-gray-800 text-lg mb-2 "><b>All Plans </b></h3>
             <div className="flex justify-center">
-            <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700 w-48"></hr>
+            
             </div>
 
             
@@ -244,14 +244,14 @@ export default function ShowPlansPage() {
 
                     {/*Increment Decrement Buttons for table*/}
 
-                    <button class="text-white p-2 bg-blue" onClick={decrement}>
+                    <button class="text-gray-800 p-2 bg-blue" onClick={decrement}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </button>
 
 
-                    <button class="text-white p-2 bg-blue" onClick={increment}>
+                    <button class="text-gray-800 p-2 bg-blue" onClick={increment}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -261,14 +261,14 @@ export default function ShowPlansPage() {
 
                     {/*Increment Decrement Buttons for table search results*/}
 
-                    <button class="text-white p-2 bg-blue" onClick={sDcr}>
+                    <button class="text-gray-800 p-2 bg-blue" onClick={sDcr}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </button>
 
 
-                    <button class="text-white p-2 bg-blue" onClick={sIncr}>
+                    <button class="text-gray-800 p-2 bg-blue" onClick={sIncr}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -340,7 +340,7 @@ export default function ShowPlansPage() {
                     </tbody>
                 </table>}
                 { isSearching && <table class="w-full table-fixed text-sm text-left text-gray-800 dark:text-gray-400 ">
-                    <thead class="text-xs text-white bg-slate-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-xs text-white gradient-header uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="py-3 px-6 w-16">
                                 Plan No.

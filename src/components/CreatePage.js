@@ -74,35 +74,35 @@ export default function CreatePage() {
 
                 {/*Heading*/}
 
-                <h3 class="text-center text-white text-lg "><b>Create </b></h3>
-                <hr class="my-5 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
+                <h3 class="text-center text-gray-800 text-lg "><b>Create </b></h3>
+                <hr class="my-5 h-px bg-gray-800 border-0 dark:bg-gray-700"></hr>
 
                 {/*Input Form*/}
 
                 <div class="grid gap-6 mb-6 md:grid-cols-1  pt-15">
 
                     <div>
-                        <label for="name" class="block mb-2 text-sm font-medium text-white  dark:text-gray-300 pt-5">Name*</label>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-800  dark:text-gray-300 pt-5">Name*</label>
                         <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" Enter the name" required=""
                             value={name} onChange={handleName}>
                         </input>
                     </div>
 
                     <div>
-                        <label for="description" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Description*</label>
+                        <label for="description" class="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-300">Description*</label>
                         <input type="text" id="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter description" required=""
                             value={description} onChange={handleDescription}>
                         </input>
                     </div>
 
                     <div>
-                        <label for="validity" class="block mb-2 text-sm font-medium text-white  dark:text-gray-300">Validity (in days)*</label>
+                        <label for="validity" class="block mb-2 text-sm font-medium text-gray-800  dark:text-gray-300">Validity (in days)*</label>
                         <input type="number" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter validity" required=""
                             value={validity} onChange={handleValidity}>
                         </input>
                     </div>
 
-                    <div class="block text-sm font-small text-white  dark:text-gray-300">
+                    <div class="block text-sm font-small text-gray-800  dark:text-gray-300">
                         ( * indicates a required field )
                     </div>
 
