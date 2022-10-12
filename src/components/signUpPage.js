@@ -20,6 +20,17 @@ export default function SignUpPage() {
   function handleSubmit(e) {
     e.preventDefault();
 
+    if(passErr){
+      toast.error("Invalid password")
+      return;
+    }
+
+    if(emailErr){
+      toast.error("Invalid Email")
+      return;
+    
+    }
+
     if(pass === '' || passConf === '' || email === '') {
       toast.error("all fields are required")
       return;
@@ -33,6 +44,10 @@ export default function SignUpPage() {
         res.json().then((user) => {
           console.log(user)
           toast.success("registration successfull!")
+          setTimeout(()=>{
+            navigate("/signin")
+          },2000)
+
         })
       })
     }else {

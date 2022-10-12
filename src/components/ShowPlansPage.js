@@ -219,7 +219,7 @@ export default function ShowPlansPage() {
                     {/* <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Your Email</label> */}
                     {/* <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg aria-hidden="true" class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button> */}
                     <select onChange={handleSearchSelect} className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100" aria-labelledby="dropdown-button">
-                            <option selected value="planno" className="inline-flex py-2 px-4 w-full hover:bg-gray-100">Plan no</option>
+                            <option selected value="planno" className="inline-flex py-2 px-4 w-full hover:bg-gray-100">Plan ID</option>
                             <option value="name" >Name</option>
                             <option value="description" >Description</option>
                             <option value="validity" >Validity</option>
@@ -293,7 +293,7 @@ export default function ShowPlansPage() {
                     <thead class="text-xs text-white gradient-header uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="py-3 px-6 w-16 ">
-                                Plan No.
+                                Plan ID
                             </th>
                             <th scope="col" class="py-3 px-6 w-48">
                                 Name
@@ -302,7 +302,7 @@ export default function ShowPlansPage() {
                                 Description
                             </th>
                             <th scope="col" class="py-3  w-16">
-                                Validity
+                                Validity (in days)
                             </th>
                             <td class="py-4 px-6 ">
 
@@ -355,7 +355,7 @@ export default function ShowPlansPage() {
                     <thead class="text-xs text-white gradient-header uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="py-3 px-6 w-16">
-                                Plan No.
+                                Plan ID
                             </th>
                             <th scope="col" class="py-3 px-6 w-48">
                                 Name
@@ -364,7 +364,7 @@ export default function ShowPlansPage() {
                                 Description
                             </th>
                             <th scope="col" class="py-3  w-16">
-                                Validity
+                                Validity (in days)
                             </th>
                             <td class="py-4 px-6">
 
