@@ -77,6 +77,17 @@ export default function ShowPlansPage() {
                 setSi(0)
                 setEe(5)
                 setSCurrsrch(searchResult.slice(si, ee))
+            }else if(srchType === 'validity'){
+                if(isNaN(searchText)) {
+                    toast.error("Validity should be a number")
+                }
+
+                let searchResult = AllMobilePlans.filter((plan) => plan.validity == searchText)
+                console.log(searchResult)
+                setSAllsrch(searchResult)
+                setSi(0)
+                setEe(5)
+                setSCurrsrch(searchResult.slice(si, ee))
             }
         }
     }
@@ -211,6 +222,7 @@ export default function ShowPlansPage() {
                             <option selected value="planno" className="inline-flex py-2 px-4 w-full hover:bg-gray-100">Plan no</option>
                             <option value="name" >Name</option>
                             <option value="description" >Description</option>
+                            <option value="validity" >Validity</option>
                         </select>
                     <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
                         

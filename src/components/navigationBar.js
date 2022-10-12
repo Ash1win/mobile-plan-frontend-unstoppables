@@ -36,6 +36,11 @@ export default function NavigationBar() {
     navigate("/signin");
   }
 
+  // window.onunload = function() {
+  //   localStorage.removeItem("user");
+  //   return '';
+  // };
+
   return (
     <nav class="gradient-header border-gray-200 px-2 sm:px-4 dark:bg-gray-900">
       <div class="container flex flex-wrap justify-between items-center mx-auto pt-2">
@@ -93,7 +98,7 @@ export default function NavigationBar() {
                   borderRadius: 12
                 }}
                 onClick={() => {
-                  window.open("http://localhost:3001/app", "_blank")
+                  window.open("http://localhost:3001/app", "_self")
                 }}
               >
                 auditlog
