@@ -68,3 +68,30 @@ background: linear-gradient(90deg, rgba(76,126,162,1) 43%, rgba(109,169,208,1) 1
   margin: 0px; 
   transform: translate3d(897px, 5637px, 0px);
 }
+
+.auto-search-container {
+  max-height: 200px;
+  /* min-height: 20px; */
+  padding: 10px;
+  width: 94%;
+  background: white;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: scroll;
+  padding-bottom: 0px;
+}
+
+.auto-search-container > ul > li {
+  margin: 2px;
+  padding: 3px;
+  padding-left: 16px;
+  /* border-bottom: 2px solid gray; */
+  cursor: pointer;
+}
+
+.auto-search-container > ul > li:hover {
+  background: rgb(232, 232, 232);
+  border-right: 4px solid blue;
+}
